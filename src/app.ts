@@ -6,6 +6,8 @@ import configRouter from "./routes/config.js"
 const app = express();
 const port = 3000;
 
+app.use(express.json());
+
 const devices = getDevices();
 const preferred = devices.filter(d => d.hostAPIName === 'Windows WASAPI');
 console.log(preferred);

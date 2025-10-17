@@ -1,14 +1,10 @@
 import fs from 'fs';
 import path from 'path';
-import type { ConfigDevice } from '../routes/config.js';
+import type { ConfigSchema } from '../types/config.js';
 
 const configDir = path.join(process.env.APPDATA || process.env.HOME + '/.config', 'Soundbyte');
 const configPath = path.join(configDir, 'config.json');
 
-export type ConfigSchema = {
-    output: ConfigDevice,
-    input: ConfigDevice
-}
 
 /**
  * Read saved user preferences for what input & output audio device to use.
