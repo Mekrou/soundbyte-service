@@ -1,9 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import type { ConfigSchema } from '../types/config.js';
-
-const configDir = path.join(process.env.APPDATA || process.env.HOME + '/.config', 'Soundbyte');
-const configPath = path.join(configDir, 'config.json');
+import { configDir, configPath } from '../constants/global.js';
 
 
 /**

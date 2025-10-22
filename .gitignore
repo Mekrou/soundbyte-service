@@ -143,3 +143,5 @@ vite.config.ts.timestamp-*
 *.d.ts.map
 *.js
 *.js.map
+
+uploads/
