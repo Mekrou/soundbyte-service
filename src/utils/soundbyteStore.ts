@@ -47,6 +47,7 @@ export function saveSoundbytes() {
 
 export function addSoundbyte(name: string, filePath: string) {
     const newSb: Soundbyte = { id: nextId++, name, filePath };
+    if (soundbytes.find(sb => sb.name === newSb.name)) return; // avoid duplicates
     soundbytes.push(newSb);
     saveSoundbytes();
 }
